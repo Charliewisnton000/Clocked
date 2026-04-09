@@ -1,0 +1,464 @@
+export default function ClockedRedesign() {
+  const categories = [
+    {
+      title: 'Career Growth',
+      desc: 'Book founders, recruiters, PMs, and operators for real-world advice.',
+      cta: 'Explore Career Experts',
+    },
+    {
+      title: 'Sports Coaching',
+      desc: 'Get 1:1 feedback from athletes, trainers, and performance coaches.',
+      cta: 'Explore Sports Coaches',
+    },
+    {
+      title: 'Tutoring & College',
+      desc: 'Connect with tutors, grad students, and mentors who can actually help.',
+      cta: 'Explore Tutors',
+    },
+  ];
+
+  const creators = [
+    {
+      name: 'Maya Chen',
+      role: 'Product Manager • Fintech',
+      price: '$35 / 15 min',
+      availability: 'Next slot today • 4:30 PM',
+      rating: '4.9',
+      bookings: '128 sessions',
+      badge: 'Verified',
+    },
+    {
+      name: 'Jordan Ellis',
+      role: 'Former D1 Basketball Trainer',
+      price: '$60 / 30 min',
+      availability: '2 spots left this week',
+      rating: '5.0',
+      bookings: '94 sessions',
+      badge: 'Verified',
+    },
+    {
+      name: 'Sofia Patel',
+      role: 'Data Analytics Tutor',
+      price: '$20 / 15 min',
+      availability: 'Available tomorrow',
+      rating: '4.8',
+      bookings: '203 sessions',
+      badge: 'Verified',
+    },
+    {
+      name: 'Evan Brooks',
+      role: 'Startup Founder • B2B SaaS',
+      price: '$75 / 30 min',
+      availability: 'Booked 5 times in last 24 hours',
+      rating: '4.9',
+      bookings: '61 sessions',
+      badge: 'Top Earner',
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        'I booked a recruiter for 20 minutes and completely changed how I approached interviews. I got an internship offer 6 weeks later.',
+      name: 'Nina R.',
+      title: 'Marketing student',
+      result: 'From no offers to 1 internship offer',
+    },
+    {
+      quote:
+        'I started offering tutoring on Clocked and turned extra study time into consistent side income every month.',
+      name: 'Daniel K.',
+      title: 'Computer science student',
+      result: '$1,240 earned in 30 days',
+    },
+    {
+      quote:
+        'The sports coaching calls felt personal, fast, and actually useful. Way better than random videos online.',
+      name: 'Jasmine L.',
+      title: 'High school athlete',
+      result: 'Improved training plan in one session',
+    },
+  ];
+
+  const steps = [
+    {
+      step: '1',
+      title: 'Find the right person',
+      desc: 'Browse verified experts by category, price, availability, and ratings.',
+    },
+    {
+      step: '2',
+      title: 'Book instantly',
+      desc: 'Choose a quick call, full session, or group booking that fits your budget.',
+    },
+    {
+      step: '3',
+      title: 'Join and get results',
+      desc: 'Meet, ask your questions, and leave with practical next steps.',
+    },
+  ];
+
+  const pricing = [
+    {
+      title: 'Quick Advice',
+      subtitle: 'Best for one focused question',
+      price: '$10–$25',
+      bullets: ['10–15 minute calls', 'Fast feedback', 'Student-friendly pricing'],
+    },
+    {
+      title: 'Deep Dive',
+      subtitle: 'Best for strategy and coaching',
+      price: '$30–$100',
+      bullets: ['30 minute sessions', 'Personalized guidance', 'Most popular format'],
+      featured: true,
+    },
+    {
+      title: 'Group Session',
+      subtitle: 'Best for affordability',
+      price: '$5–$20',
+      bullets: ['Lower cost per person', 'Live Q&A', 'Built-in community feel'],
+    },
+  ];
+
+  const stats = [
+    { label: 'Calls booked this week', value: '1,284' },
+    { label: 'Average expert rating', value: '4.9/5' },
+    { label: 'Creators earned this month', value: '$86K+' },
+    { label: 'Verified experts available', value: '500+' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-slate-950 font-bold">
+              C
+            </div>
+            <div>
+              <p className="text-lg font-semibold tracking-tight">Clocked</p>
+              <p className="text-xs text-slate-400">Turn time into opportunity</p>
+            </div>
+          </div>
+
+          <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+            <a href="#experts" className="transition hover:text-white">Experts</a>
+            <a href="#how-it-works" className="transition hover:text-white">How it works</a>
+            <a href="#earn" className="transition hover:text-white">Earn</a>
+            <a href="#reviews" className="transition hover:text-white">Reviews</a>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <button className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/5">
+              Log in
+            </button>
+            <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]">
+              Start booking
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_35%)]" />
+          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+            <div className="relative z-10">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-300">
+                <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                1,284 calls booked this week
+              </div>
+
+              <h1 className="max-w-2xl text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
+                Book 1:1 calls with people you actually want to learn from.
+              </h1>
+
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+                Skip generic advice. Talk directly to founders, athletes, tutors, recruiters,
+                and creators who can help you move faster.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <button className="rounded-full bg-white px-6 py-3 text-base font-semibold text-slate-950 transition hover:scale-[1.02]">
+                  Browse experts
+                </button>
+                <button className="rounded-full border border-white/15 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/5">
+                  Become a creator
+                </button>
+              </div>
+
+              <div className="mt-10 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p className="text-xl font-semibold">{stat.value}</p>
+                    <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative z-10">
+              <div className="rounded-[32px] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/30">
+                <div className="rounded-[28px] border border-white/10 bg-slate-900 p-5">
+                  <div className="mb-4 flex flex-wrap gap-3">
+                    <div className="rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-950">Career</div>
+                    <div className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">Sports</div>
+                    <div className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">Tutoring</div>
+                    <div className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">$10–$50</div>
+                  </div>
+
+                  <div className="space-y-4">
+                    {creators.slice(0, 3).map((creator) => (
+                      <div
+                        key={creator.name}
+                        className="rounded-3xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-white/20 hover:bg-white/[0.05]"
+                      >
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex gap-4">
+                            <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-500" />
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <p className="font-semibold">{creator.name}</p>
+                                <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 text-xs text-emerald-300">
+                                  {creator.badge}
+                                </span>
+                              </div>
+                              <p className="text-sm text-slate-400">{creator.role}</p>
+                              <p className="mt-2 text-sm text-slate-300">⭐ {creator.rating} • {creator.bookings}</p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-semibold">{creator.price}</p>
+                            <p className="mt-2 text-xs text-amber-300">{creator.availability}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 bg-white/[0.02]">
+          <div className="mx-auto max-w-7xl px-6 py-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-slate-400">
+              <span>Verified talent only</span>
+              <span>No-show protection</span>
+              <span>Refund support</span>
+              <span>Secure booking flow</span>
+              <span>Ratings & reviews</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="experts" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Explore by goal</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                Start with what you need help with.
+              </h2>
+            </div>
+            <p className="max-w-xl text-slate-400">
+              Instead of one generic marketplace, Clocked helps users enter through clear use cases that convert better.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {categories.map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7">
+                <div className="mb-6 h-12 w-12 rounded-2xl bg-white/10" />
+                <h3 className="text-2xl font-semibold">{item.title}</h3>
+                <p className="mt-4 leading-7 text-slate-400">{item.desc}</p>
+                <button className="mt-8 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium transition hover:bg-white/5">
+                  {item.cta}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-20">
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Affordable entry points</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                Make pricing feel approachable.
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {pricing.map((plan) => (
+              <div
+                key={plan.title}
+                className={`rounded-[28px] border p-7 ${
+                  plan.featured
+                    ? 'border-white bg-white text-slate-950 shadow-2xl shadow-white/10'
+                    : 'border-white/10 bg-white/[0.03] text-white'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold">{plan.title}</h3>
+                    <p className={`mt-2 text-sm ${plan.featured ? 'text-slate-600' : 'text-slate-400'}`}>
+                      {plan.subtitle}
+                    </p>
+                  </div>
+                  {plan.featured && (
+                    <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                </div>
+                <p className="mt-8 text-4xl font-semibold">{plan.price}</p>
+                <div className="mt-8 space-y-3">
+                  {plan.bullets.map((bullet) => (
+                    <div key={bullet} className="flex items-center gap-3">
+                      <div className={`h-2.5 w-2.5 rounded-full ${plan.featured ? 'bg-slate-950' : 'bg-white'}`} />
+                      <p>{bullet}</p>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className={`mt-8 rounded-full px-5 py-3 text-sm font-semibold transition ${
+                    plan.featured
+                      ? 'bg-slate-950 text-white hover:opacity-90'
+                      : 'border border-white/15 hover:bg-white/5'
+                  }`}
+                >
+                  Choose this option
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="how-it-works" className="mx-auto max-w-7xl px-6 pb-20">
+          <div className="rounded-[36px] border border-white/10 bg-white/[0.03] p-8 md:p-12">
+            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-400">How it works</p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                  Search, book, call.
+                </h2>
+              </div>
+              <p className="max-w-xl text-slate-400">
+                A faster marketplace flow that makes the product feel obvious in seconds.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {steps.map((item) => (
+                <div key={item.step} className="rounded-[28px] border border-white/10 bg-slate-950 p-6">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-950 font-semibold">
+                    {item.step}
+                  </div>
+                  <h3 className="text-2xl font-semibold">{item.title}</h3>
+                  <p className="mt-4 leading-7 text-slate-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="earn" className="mx-auto max-w-7xl px-6 pb-20">
+          <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[32px] border border-white/10 bg-white/[0.03] p-8 md:p-10">
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-400">For creators</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                Turn knowledge into income.
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+                Clocked should sell the creator side harder. Show what people can earn,
+                who is booking them, and how easy it is to start.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-3xl border border-white/10 bg-slate-950 p-5">
+                  <p className="text-sm text-slate-400">Example</p>
+                  <p className="mt-3 text-2xl font-semibold">$50 × 20 calls</p>
+                  <p className="mt-2 text-slate-400">= $1,000 / month</p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-slate-950 p-5">
+                  <p className="text-sm text-slate-400">Top earners</p>
+                  <p className="mt-3 text-2xl font-semibold">$4.8K</p>
+                  <p className="mt-2 text-slate-400">earned last month</p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-slate-950 p-5">
+                  <p className="text-sm text-slate-400">Fast start</p>
+                  <p className="mt-3 text-2xl font-semibold">10 min</p>
+                  <p className="mt-2 text-slate-400">to set up a profile</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[32px] border border-emerald-400/20 bg-emerald-400/10 p-8 md:p-10">
+              <p className="text-sm uppercase tracking-[0.2em] text-emerald-300">Growth loop</p>
+              <h3 className="mt-3 text-3xl font-semibold tracking-tight">Built-in sharing and referrals.</h3>
+              <div className="mt-8 space-y-4 text-emerald-50/90">
+                <div className="rounded-2xl border border-emerald-300/20 bg-black/10 p-4">
+                  Share short clips from calls
+                </div>
+                <div className="rounded-2xl border border-emerald-300/20 bg-black/10 p-4">
+                  Give friends $10 booking credit
+                </div>
+                <div className="rounded-2xl border border-emerald-300/20 bg-black/10 p-4">
+                  Ask a question for free, then upsell full sessions
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" className="mx-auto max-w-7xl px-6 pb-20">
+          <div className="mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Social proof</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+              Real outcomes make the product believable.
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <div key={item.name} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-7">
+                <p className="text-lg leading-8 text-slate-200">“{item.quote}”</p>
+                <div className="mt-8 border-t border-white/10 pt-5">
+                  <p className="font-semibold">{item.name}</p>
+                  <p className="text-sm text-slate-400">{item.title}</p>
+                  <p className="mt-3 text-sm text-emerald-300">{item.result}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-24">
+          <div className="rounded-[36px] border border-white/10 bg-white px-8 py-14 text-slate-950 md:px-14">
+            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Ready to book?</p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+                  Get advice that actually moves you forward.
+                </h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                  Book verified experts, join a quick call, and leave with clear next steps.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
+                <button className="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+                  Browse experts
+                </button>
+                <button className="rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-50">
+                  Become a creator
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
