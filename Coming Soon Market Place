@@ -1,0 +1,121 @@
+export default function ClockedRedesign() {
+  const categories = [
+    {
+      title: 'College Courses',
+      desc: 'Get help in accounting, finance, calculus, and data analytics from students who have already mastered it.',
+      cta: 'Explore Courses',
+    },
+    {
+      title: 'Tutoring',
+      desc: 'Book 1:1 sessions with tutors for homework help, test prep, and concept breakdowns.',
+      cta: 'Find a Tutor',
+    },
+    {
+      title: 'Study Help',
+      desc: 'Quick calls to review problems, clarify concepts, and prepare for exams fast.',
+      cta: 'Get Help Now',
+    },
+  ];
+
+  const creators = [
+    {
+      name: 'Sofia Patel',
+      role: 'Data Analytics Tutor',
+      price: '$20 / 15 min',
+      availability: 'Available today',
+      rating: '4.8',
+      bookings: '203 sessions',
+      badge: 'Verified',
+    },
+    {
+      name: 'Daniel Kim',
+      role: 'Accounting Tutor • VT',
+      price: '$25 / 20 min',
+      availability: '2 spots left today',
+      rating: '5.0',
+      bookings: '150 sessions',
+      badge: 'Top Tutor',
+    },
+    {
+      name: 'Maya Chen',
+      role: 'Calculus & Stats Tutor',
+      price: '$30 / 30 min',
+      availability: 'Booked 4 times today',
+      rating: '4.9',
+      bookings: '128 sessions',
+      badge: 'Verified',
+    },
+  ];
+
+  const stats = [
+    { label: 'Sessions booked this week', value: '1,284' },
+    { label: 'Average tutor rating', value: '4.9/5' },
+    { label: 'Students helped this month', value: '3,500+' },
+    { label: 'Verified tutors', value: '200+' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-slate-950 font-bold">
+              C
+            </div>
+            <div>
+              <p className="text-lg font-semibold">Clocked</p>
+              <p className="text-xs text-slate-400">Turn study time into results</p>
+            </div>
+          </div>
+
+          <nav className="hidden md:flex gap-8 text-sm text-slate-300">
+            <span className="text-slate-500">Market Place (Coming Soon)</span>
+            <a href="#">Tutors</a>
+            <a href="#">How it works</a>
+            <a href="#">Reviews</a>
+          </nav>
+
+          <button className="bg-white text-black px-4 py-2 rounded-full">
+            Find a tutor
+          </button>
+        </div>
+      </header>
+
+      <main className="px-6 py-20 max-w-6xl mx-auto">
+        <h1 className="text-5xl font-bold mb-6">
+          Get unstuck. Talk to a tutor instantly.
+        </h1>
+
+        <p className="text-lg text-gray-300 mb-8">
+          Skip hours of confusion. Book a quick call with someone who already understands the material.
+        </p>
+
+        <div className="grid grid-cols-2 gap-4 mb-10">
+          {stats.map((s) => (
+            <div key={s.label} className="border p-4 rounded-xl">
+              <p className="text-xl font-bold">{s.value}</p>
+              <p className="text-sm text-gray-400">{s.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="space-y-4">
+          {creators.map((c) => (
+            <div key={c.name} className="border p-4 rounded-xl flex justify-between">
+              <div>
+                <p className="font-semibold">{c.name}</p>
+                <p className="text-sm text-gray-400">{c.role}</p>
+                <p className="text-sm">⭐ {c.rating} • {c.bookings}</p>
+              </div>
+              <div className="text-right">
+                <p>{c.price}</p>
+                <p className="text-sm text-yellow-400">{c.availability}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
